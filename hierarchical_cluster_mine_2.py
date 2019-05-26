@@ -64,7 +64,8 @@ class clustering(object):
       
    def kMeansViz(self,clusterNum):
       # applying k means to the dataset
-      kmeans = KMeans(n_clusters = clusterNum,init = 'k-means++',precompute_distances=True,max_iter=300,n_init=10,random_state=0,n_jobs=-1)
+      kmeans = KMeans(n_clusters = clusterNum,init = 'k-means++',\
+                      precompute_distances=True,max_iter=300,n_init=10,random_state=0,n_jobs=-1)
       y_kmeans = kmeans.fit_predict(self.X)
       
       # visualizing the clusters using K-means
